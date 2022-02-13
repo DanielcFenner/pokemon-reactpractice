@@ -8,6 +8,9 @@ export default function Header(props) {
       </button>
       <header>pokésoulmates</header>
       <div className="header--underline"></div>
+      <a href="https://www.danielfenner.dev" target="_blank">
+        by @danielfennerdev
+      </a>
     </div>
   );
 }

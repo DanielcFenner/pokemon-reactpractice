@@ -15,23 +15,23 @@ function App() {
           case -1:
             return 0;
           case 0:
-            return 897;
+            return { min: 0, max: 897 };
           case 1:
-            return 150;
+            return { min: 0, max: 150 };
           case 2:
-            return 250;
+            return { min: 150, max: 250 };
           case 3:
-            return 385;
+            return { min: 250, max: 385 };
           case 4:
-            return 492;
+            return { min: 385, max: 492 };
           case 5:
-            return 648;
+            return { min: 492, max: 648 };
           case 6:
-            return 720;
+            return { min: 648, max: 720 };
           case 7:
-            return 808;
+            return { min: 720, max: 808 };
           case 8:
-            return 905;
+            return { min: 808, max: 897 };
         }
       });
     },
@@ -50,7 +50,6 @@ function App() {
 
   function chooseGen(gen) {
     setGen(gen);
-    console.log(gen);
   }
 
   return (
@@ -58,7 +57,7 @@ function App() {
       <div className="wrapperCenter">
         <Header themeToggle={toggleTheme} />
         <main>
-          {gen >= 0 && <Soulmates gen={genRange} />}
+          {gen >= 0 && <Soulmates gen={genRange} resetButton={chooseGen} />}
           {gen === -1 && <Genselect gen={chooseGen} />}
         </main>
       </div>
