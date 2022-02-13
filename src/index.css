@@ -1,0 +1,73 @@
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blueDark.css";
+@import "@radix-ui/colors/pink.css";
+@import "@radix-ui/colors/pinkDark.css";
+@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/slateDark.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+
+main {
+  color: var(--blue12);
+  background-color: var(--blue1);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--blue1);
+  padding: 0.5rem;
+  font-weight: 700;
+  color: var(--blue12);
+  padding: 1rem;
+  background-color: var(--blue1);
+}
+
+.header--underline {
+  height: 2px;
+  background: linear-gradient(45deg, var(--pink9), var(--blue9));
+  width: 14ch;
+  margin-top: 0.5rem;
+}
+
+.genSelect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  justify-items: stretch;
+}
+
+.genSelectAll {
+  grid-column: span 2;
+}
+
+.genSelect--title {
+  font-size: 2rem;
+  grid-column: span 2;
+}
+
+.genSelectButton {
+  text-align: center;
+  cursor: pointer;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--blue3);
+}
+
+.genSelectButton:hover {
+  background-color: var(--blue4);
+}
