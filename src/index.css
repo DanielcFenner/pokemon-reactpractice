@@ -9,11 +9,23 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   font-family: "Inter", sans-serif;
   font-size: 18px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--blue1);
+}
+
+.wrapperCenter {
+  width: min(100%, 80ch);
 }
 
 main {
@@ -26,6 +38,7 @@ main {
 .header {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .header {
@@ -44,6 +57,15 @@ main {
   margin-top: 0.5rem;
 }
 
+.header--themeToggle {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+}
+
 .genSelect {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -56,7 +78,7 @@ main {
 }
 
 .genSelect--title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   grid-column: span 2;
 }
 
@@ -70,4 +92,63 @@ main {
 
 .genSelectButton:hover {
   background-color: var(--blue4);
+}
+
+.soulmates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.soulmates--title {
+  font-size: 1.75rem;
+  grid-column: span 2;
+}
+
+.soulmates--findButton {
+  cursor: pointer;
+  grid-column: span 2;
+  padding: 2rem;
+  background-color: var(--blue3);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--blue12);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.soulmates--findButton:hover {
+  background-color: var(--blue4);
+}
+
+.soulmates--pokeGrid {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.soulmates--pokeGrid div {
+  border-radius: 0.5rem;
+  height: 150px;
+  background-color: var(--blue2);
+}
+
+.soulmates--pokeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.soulmates--pokeTitle {
+  text-align: center;
+}
+
+.soulmates--pokeImg {
+  width: 100px;
 }
