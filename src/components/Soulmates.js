@@ -5,6 +5,7 @@ export default function Soulmates(props) {
   const [newPoke, setNewPoke] = React.useState(
     randomRange(props.gen.min, props.gen.max)
   );
+  const [pokeCount, setPokeCount] = React.useState(0);
 
   console.log(pokes);
 
@@ -15,11 +16,12 @@ export default function Soulmates(props) {
   const firstUpdate = React.useRef(true);
   React.useEffect(
     function () {
+      setPokeCount((oldCount) => oldCount + 1);
       if (firstUpdate.current) {
         fetch("https://pokeapi.co/api/v2/pokemon/" + newPoke)
           .then((res) => res.json())
           .then((data) => {
-            if (pokes.length < 6 && props.gen != 0) {
+            if (pokeCount < 7 && props.gen != 0) {
               setPokes((oldPokes) => {
                 return [
                   ...oldPokes,
